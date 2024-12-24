@@ -96,6 +96,11 @@
     <input type="checkbox" id="checkbox">
     <label for="checkbox">hi</label>
     <script>
+    document.getElementById('dropdown').addEventListener('change', function() {
+            document.body.classList.add('fade-out');
+            setTimeout(() => location.hash = this.value, 500);
+        });
+    
     const hello = document.getElementById('checkbox');
     
     hello.addEventListener('change', function() {
