@@ -33,6 +33,10 @@
             background-color: #ddd;
             transform: scale(1.0155);
         }
+        #drop {
+            display: inline-block;
+            margin-left: 10px;
+        }
         @keyframes blink {
             0% {
                 opacity: 1;
@@ -54,11 +58,20 @@
     </style>
 </head>
 <body>
-    <div id="bla">All the diffrent type of games</div>
-    <div id="dis">
-        <h6 style="color: red; font-weight: bold;">Disclaimer: These websites and games were not made by me (mumbojum2). All credit goes to, Nintendoboi22, FatGarfield777, prodbyeagle, wfragoso02, theaniketraj, TylerPalko, PiSaucer and the owners/coders of monkey-type.org, amhooman.github.io, paperio2online.github.io, html-online-game.github.io, and smashkartsonlinegames.github.io</h6>
+    <div id="bla">Mumbojum2's Game Website
+    <div id="drop">
+    <select id="dropdown" name="dropdown" onchange="window.location.href=this.value;">
+        <option value="#dis">Games</option>
+        <option value="#mj">Knarfy</option>
+        <option value="#linki">Individual Links</option>
+    </select>
     </div>
-    <h1>Game Website Links</h1>
+    </div>
+    <div id="dis">
+        <h6 style="margin-top: 40px; color: red; font-weight: bold;">Disclaimer: These websites and games were not made by me (mumbojum2). All credit goes to, Nintendoboi22, FatGarfield777, prodbyeagle, wfragoso02, theaniketraj, TylerPalko, PiSaucer and the owners/coders of monkey-type.org, amhooman.github.io, paperio2online.github.io, html-online-game.github.io, and smashkartsonlinegames.github.io</h6>
+    </div>
+    <h1>This Website Is Under Contruction</h1>
+    <h1 id="wl">Game Website Links</h1>
     <a href="https://mumbojum2.github.io/567/index.html" class="link">MumboJum2 567</a>
     <a href="https://mumbojum2.github.io/new/Games.html" class="link">MumboJum2 New Games</a>
     <a href="https://mumbojum2.github.io/idleclicker/game/index.html" class="link">Idle Clicker</a>
@@ -71,7 +84,7 @@
     <a href="https://mumbojum2.github.io/hub/" class="link">1v1.lol</a>
     <a href="https://mumbojum2.github.io/bo/" class="link">there is something seriously wrong with this website</a>
     <br>
-    <h1>Individual Game Links</h1>
+    <h1 id="linki">Individual Game Links</h1>
     <a href="https://paperio2online.github.io/" class="link">paper.io</a>
     <a href="https://mumbojum2.github.io/games/ragdoll-archers/" class="link">Ragdoll Archers</a>
     <a href="https://amhooman.github.io/website/games/ageofwar/" class="link">Age Of War</a>
@@ -80,8 +93,18 @@
     <div class="blinking-text">
         More Coming Soon!
     </div>
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">hi</label>
     <script>
-        // JavaScript code goes here
+    const hello = document.getElementById('checkbox');
+    
+    hello.addEventListener('change', function() {
+    if (this.checked) {
+        alert("The checkbox is checked!");
+    } else {
+        alert("The checkbox is unchecked!");
+    }
+    });
     </script>
 </body>
 </html>
