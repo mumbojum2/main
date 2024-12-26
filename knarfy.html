@@ -45,7 +45,7 @@
             margin: -50px;
             --rotation-angle: calc(360deg / 8);
             transform-origin: 150px 150px;
-            transform: rotate(calc(var(--i) * var(--rotation-angle))) translate(150px) rotate(calc(-1 * var(--i) * var(--rotation-angle)));
+            transform: rotate(calc(var(--i) * var(--rotation-angle))) translate(200px) rotate(calc(-1 * var(--i) * var(--rotation-angle)));
         }
 
         #popout {
@@ -68,6 +68,7 @@
     </style>
 </head>
 <body>
+    <p id="pr"></p>
     <div class="container">
         <div class="photo-center">
             <img src="./knarfy.png" alt="knarfy!" id="popout">
@@ -91,6 +92,12 @@
         setInterval(() => {
             audio.play();
         }, 3000);
+        switch(Math.floor(Math.random() * 10) +1) {
+            case 1:
+                document.getElementById('pr').innerHTML = "Knarfy Is Awesome";
+                document.getElementById('knarfy-audio').src = "knarfytoo.mp3";
+            break;
+        }
     </script>
 </body>
 </html>
