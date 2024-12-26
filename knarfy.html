@@ -67,6 +67,7 @@
         }
         #pr {
             position: absolute;
+            width: 100px;
         }
     </style>
 </head>
@@ -95,8 +96,8 @@
         setInterval(() => {
             audio.play();
         }, 3000);
-        var mx = window.innerWidth;
-        var my = window.innerHeight;
+        var mx = window.innerWidth - 100;
+        var my = window.innerHeight - 100;
         var para = document.getElementById("pr");
         var x = Math.floor(Math.random() * mx) +1;
         var y = Math.floor(Math.random() * my) +1;
