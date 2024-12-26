@@ -30,20 +30,48 @@
     display: inline-block;
     margin: 0 10px;
     }
+    .rotating-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 10s linear infinite;
+    }
+.rotating-photo {
+    position: absolute;
+    width: 100px;
+    --rotation-angle: calc(360deg / 8);
+    transform: rotate(calc(var(--i) * var(--rotation-angle))) translate(150px) rotate(calc(var(--i) * -var(--rotation-angle)));
+    }
+    @keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    }
   </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+<div id="contan">
   <div id="con">
 <img src="./knarfy.png" alt="knarfy!" id="popout">
   </div>
-    <div class="tilted-words">
-            <span class="word" style="transform: rotate(-45deg);">Word1</span>
-            <span class="word" style="transform: rotate(45deg);">Word2</span>
-            <span class="word" style="transform: rotate(-30deg);">Word3</span>
-            <span class="word" style="transform: rotate(30deg);">Word4</span>
+    <div class="rotating-circle">
+            <img src="./knarfy.png" alt="knarfy!" class="rotating-photo">
+            <img src="./knarfy.png" alt="knarfy!" class="rotating-photo">
+            <img src="./knarfy.png" alt="knarfy!" class="rotating-photo">
+            <img src="./knarfy.png" alt="knarfy!" class="rotating-photo">
+        </div>
     </div>
   <audio id="knarfy-audio" src="knarfy.mp3" preload="auto"></audio>
   <script>
