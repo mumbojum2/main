@@ -13,8 +13,7 @@
             margin: 0;
             flex-direction: column;
         }
-
-        .container {
+        #container {
             position: relative;
             text-align: center;
         }
@@ -67,13 +66,13 @@
         }
         #pr {
             position: absolute;
-            width: 100px;
+            width: 200px;
         }
     </style>
 </head>
 <body>
     <p id="pr"></p>
-    <div class="container">
+    <div id="container">
         <div class="photo-center">
             <img src="./knarfy.png" alt="knarfy!" id="popout">
         </div>
@@ -96,14 +95,23 @@
         setInterval(() => {
             audio.play();
         }, 3000);
-        var mx = window.innerWidth - 100;
-        var my = window.innerHeight - 100;
+        var mx = window.innerWidth - 200;
+        var my = window.innerHeight - 200;
         var para = document.getElementById("pr");
-
+        
+        var width = document.getElementById("container").offsetWidth;
+        var height = document.getElementById("container").offsetHeight;
+        
         function moveele()  {
         var x = Math.floor(Math.random() * mx) +1;
         var y = Math.floor(Math.random() * my) +1;
 
+        var righte = width + document.getElementById("container").offsetWidth;
+        var tope = height + document.getElementById("container").offsetHeight;
+        if (x => width && x <= righte && y => height && y <= tope) {
+        
+        }
+        
         para.style.left = x + "px";
         para.style.top = y + "px"
         
