@@ -99,20 +99,10 @@
         var my = window.innerHeight - 200;
         var para = document.getElementById("pr");
         
-        var width = document.getElementById("container").offsetWidth;
-        var height = document.getElementById("container").offsetHeight;
-        
         function moveele()  {
         var x = Math.floor(Math.random() * mx) +1;
         var y = Math.floor(Math.random() * my) +1;
 
-        var righte = width + document.getElementById("container").offsetWidth;
-        var tope = height + document.getElementById("container").offsetHeight;
-        if (x => width && x <= righte && y => height && y <= tope) {
-        x = 100;
-        y = 100;
-        }
-        
         para.style.left = x + "px";
         para.style.top = y + "px"
         
