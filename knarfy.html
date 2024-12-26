@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    }
+    #con {
+    text-align: center;
+    margin-top: 20px;
+    }
+    #popout {
+    width: 300px;
+    transition: transform 0.3s;
+    }
+    #popout:hover {
+    transform: scale(1.2);
+    }
+    .tilted-words {
+    position: relative;
+    margin-top: 20px;
+    }
 
+    .word {
+    display: inline-block;
+    margin: 0 10px;
+    }
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="con">
+<img src="./knarfy.png" alt="knarfy!" id="popout">
+  </div>
+    <div class="tilted-words">
+            <span class="word" style="transform: rotate(-45deg);">Word1</span>
+            <span class="word" style="transform: rotate(45deg);">Word2</span>
+            <span class="word" style="transform: rotate(-30deg);">Word3</span>
+            <span class="word" style="transform: rotate(30deg);">Word4</span>
+    </div>
+</body>
+</html>
