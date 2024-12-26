@@ -65,6 +65,9 @@
                 transform: translate(-50%, -50%) rotate(360deg);
             }
         }
+        #pr {
+            position: absolute;
+        }
     </style>
 </head>
 <body>
@@ -92,7 +95,16 @@
         setInterval(() => {
             audio.play();
         }, 3000);
-        switch(Math.floor(Math.random() * 10) +1) {
+        var mx = window.innerWidth;
+        var my = window.innerHeight;
+        var para = document.getElementById("pr");
+        var x = Math.floor(Math.random() * mx) +1;
+        var y = Math.floor(Math.random() * my) +1;
+
+        para.style.left = x + "px";
+        para.style.top = y + "px"
+        
+        switch(Math.floor(Math.random() * 1) +1) {
             case 1:
                 document.getElementById('pr').innerHTML = "Knarfy Is Awesome";
                 document.getElementById('knarfy-audio').src = "knarfytoo.mp3";
