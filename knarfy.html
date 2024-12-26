@@ -33,15 +33,15 @@
             width: 300px;
             height: 300px;
             transform: translate(-50%, -50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
             animation: rotate 10s linear infinite;
         }
 
         .rotating-photo {
             position: absolute;
             width: 100px;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0 0;
             --rotation-angle: calc(360deg / 8);
             transform: rotate(calc(var(--i) * var(--rotation-angle))) translate(150px) rotate(calc(var(--i) * -var(--rotation-angle)));
         }
