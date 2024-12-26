@@ -45,5 +45,12 @@
             <span class="word" style="transform: rotate(-30deg);">Word3</span>
             <span class="word" style="transform: rotate(30deg);">Word4</span>
     </div>
+  <audio id="knarfy-audio" src="knarfy.mp3" preload="auto"></audio>
+  <script>
+    const audio = document.getElementById('knarfy-audio');
+        setInterval(() => {
+            audio.play();
+        }, 3000);
+  </script>
 </body>
 </html>
