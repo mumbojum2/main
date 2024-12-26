@@ -107,10 +107,14 @@
         para.style.left = x + "px";
         para.style.top = y + "px"
         
-        switch(Math.floor(Math.random() * 1) +1) {
+        switch(Math.floor(Math.random() * 10) +1) {
             case 1:
                 document.getElementById('pr').innerHTML = "Knarfy Is Awesome";
-                document.getElementById('knarfy-audio').src = "knarfytoo.mp3";
+                document.getElementById('knarfy-audio').src = "knarfy1.mp3";
+            break;
+            case 2:
+                document.getElementById('pr').innerHTML = "Eat some uranium.";
+                document.getElementById('knarfy-audio').src = "knarfy2.mp3";
             break;
             }
         }
