@@ -99,6 +99,8 @@
         var mx = window.innerWidth - 100;
         var my = window.innerHeight - 100;
         var para = document.getElementById("pr");
+
+        function moveele()  {
         var x = Math.floor(Math.random() * mx) +1;
         var y = Math.floor(Math.random() * my) +1;
 
@@ -110,8 +112,9 @@
                 document.getElementById('pr').innerHTML = "Knarfy Is Awesome";
                 document.getElementById('knarfy-audio').src = "knarfytoo.mp3";
             break;
+            }
         }
-        setInterval(moveElement, 1000);
+        setInterval(moveele, 1000);
     </script>
 </body>
 </html>
