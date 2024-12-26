@@ -39,11 +39,13 @@
         .rotating-photo {
             position: absolute;
             width: 100px;
+            height: 100px;
             top: 50%;
             left: 50%;
-            transform-origin: 0 0;
+            margin: -50px;
             --rotation-angle: calc(360deg / 8);
-            transform: rotate(calc(var(--i) * var(--rotation-angle))) translate(150px) rotate(calc(var(--i) * -var(--rotation-angle)));
+            transform-origin: 150px 150px;
+            transform: rotate(calc(var(--i) * var(--rotation-angle))) translate(150px) rotate(calc(-1 * var(--i) * var(--rotation-angle)));
         }
 
         #popout {
