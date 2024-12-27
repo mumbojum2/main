@@ -90,15 +90,17 @@
             <img src="./knarfy.png" alt="knarfy!" class="rotating-photo" style="--i: 7;">
         </div>
     </div>
-
-    <iframe src="knarfy1.mp3" allow="autoplay" style="display:none" id="knarfy-audio"></iframe>
+    
+    <audio id="knarfy-audio" src="knarfy.mp3" preload="auto"></audio>
+    <button id="play-button">Play Audio</button>
 
     <script>
-        const audio = document.getElementById('knarfy-audio');
-        var audio1 = new Audio('knarfy1.mp3');
-        setInterval(() => {
-            audio1.play();
-        }, 3000);
+        document.getElementById('play-button').addEventListener('click', function() {
+            const audio = document.getElementById('knarfy-audio');
+            audio.play();
+            setInterval(() => {
+                audio.play();
+            }, 3000);
         var mx = window.innerWidth - 200;
         var my = window.innerHeight - 200;
         var para = document.getElementById("pr");
