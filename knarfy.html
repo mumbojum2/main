@@ -17,14 +17,12 @@
             position: relative;
             text-align: center;
         }
-
         .photo-center {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
         .rotating-circle {
             position: absolute;
             top: 50%;
@@ -34,7 +32,6 @@
             transform: translate(-50%, -50%);
             animation: rotate 10s linear infinite;
         }
-
         .rotating-photo {
             position: absolute;
             width: 100px;
@@ -46,16 +43,13 @@
             transform-origin: 150px 150px;
             transform: rotate(calc(var(--i) * var(--rotation-angle))) translate(200px) rotate(calc(-1 * var(--i) * var(--rotation-angle)));
         }
-
         #popout {
             width: 150px;
             transition: transform 0.3s;
         }
-
         #popout:hover {
             transform: scale(1.2);
         }
-
         @keyframes rotate {
             from {
                 transform: translate(-50%, -50%) rotate(0deg);
@@ -68,7 +62,7 @@
             position: absolute;
             width: 200px;
             z-index: 10;
-            color:green; 
+            color: green;
             font-weight: bold;
         }
     </style>
@@ -101,25 +95,24 @@
             setInterval(() => {
                 audio.play();
             }, 3000);
-        var mx = window.innerWidth - 200;
-        var my = window.innerHeight - 200;
-        var para = document.getElementById("pr");
-        
-        function moveele()  {
-        var x = Math.floor(Math.random() * mx) +1;
-        var y = Math.floor(Math.random() * my) +1;
-
-        para.style.left = x + "px";
-        para.style.top = y + "px"
-        
-        switch(Math.floor(Math.random() * 10) +1) {
-            case 1:
-                document.getElementById('pr').innerHTML = "Kerchoo";
-                document.getElementById('knarfy-audio').src = "knarfy1.mp3";
-            break;
+            var mx = window.innerWidth - 200;
+            var my = window.innerHeight - 200;
+            var para = document.getElementById("pr");
+            
+            function moveele() {
+                var x = Math.floor(Math.random() * mx) + 1;
+                var y = Math.floor(Math.random() * my) + 1;
+                para.style.left = x + "px";
+                para.style.top = y + "px";
+                switch(Math.floor(Math.random() * 10) + 1) {
+                    case 1:
+                        para.innerHTML = "Kerchoo";
+                        audio.src = "knarfy1.mp3";
+                        break;
+                }
             }
-        }
-        setInterval(moveele, 2000);
+            setInterval(moveele, 2000);
+        });
     </script>
 </body>
 </html>
