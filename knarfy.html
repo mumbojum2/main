@@ -101,16 +101,7 @@
         </div>
     </div>
     
-    <audio id="knarfy-audio" src="knarfy1.mp3" preload="auto"></audio>
-    <button id="play-button">Play Audio</button>
-
     <script>
-        document.getElementById('play-button').addEventListener('click', function() {
-            const audio = document.getElementById('knarfy-audio');
-            audio.play();
-            setInterval(() => {
-                audio.play();
-            }, 3000);
             var mx = window.innerWidth - 200;
             var my = window.innerHeight - 200;
             var para = document.getElementById("pr");
@@ -123,11 +114,9 @@
                 switch(Math.floor(Math.random() * 10) + 1) {
                     case 1:
                         para.innerHTML = "Kerchoo";
-                        audio.src = "knarfy1.mp3";
                         break;
                     case 2:
                         para.innerHTML = "Why wouldn't it (uranium) be safe to eat?";
-                        audio.src = "knarfy2.mp3";
                         break;
                 }
             }
