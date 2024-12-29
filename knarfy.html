@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knarfy Page</title>
     <style>
+        html {
+             scroll-behavior: smooth;
+        }
         body {
             display: flex;
             justify-content: center;
@@ -13,6 +16,9 @@
             margin: 0;
             flex-direction: column;
             background-color: lightblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
         }
         #container {
             position: relative;
@@ -82,9 +88,49 @@
         #play-button:hover {
             background-color: #45a049;
         }
+        #bla {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        #drop {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        select {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 150px;
+            background-color: #f0f0f0;
+            color: #333;
+            border: 2px solid #ccc;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
+    <div id="bla">Mumbojum2's Game Website
+        <div id="drop">
+            <select id="dropdown" name="dropdown" onchange="window.location.href=this.value;">
+                <option value="#">Games</option>
+                <option value="knarfy.html">knarfy</option>
+                <option value="videos.html">Video's</option>
+            </select>
+        </div>
+    </div>
     <p id="pr"></p>
     <div id="container">
         <div class="photo-center">
