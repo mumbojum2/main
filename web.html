@@ -5,21 +5,21 @@
     <link rel="icon" type="image/x-icon" href="./download.ico">
     <style>
         html {
-        scroll-behavior: smooth;
+            scroll-behavior: smooth;
         }
         body {
             font-family: Arial, sans-serif;
         }
         #bla {
-            background-color:     #333;
-            color:     #fff;
-            padding:     10px;
-            text-align:     center;
-            position:     fixed;
-            top:     0;
-            left:     0;
-            width:     100%;
-            z-index:     999;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
         }
         .link {
             display: block;
@@ -41,19 +41,10 @@
             margin-left: 10px;
         }
         @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
         }
-
         .blinking-text {
             font-size: 2em;
             animation: blink 1s infinite;
@@ -66,68 +57,245 @@
             border-radius: 5px;
             font-size: 16px;
             width: 150px;
-            /* Add your custom styling here */
-            background-color: #f0f0f0; /* Light grey background */
-            color: #333; /* Dark grey text */
-            border: 2px solid #ccc; /* Light grey border */
-            padding: 10px 15px; /* More padding */
-            border-radius: 8px; /* Rounded corners */
         }
         #dis {
             margin-top: 65px;
+        }
+        #games-list {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div id="bla">Mumbojum2's Game Website
-    <div id="drop">
-    <select id="dropdown" name="dropdown" onchange="window.location.href=this.value;">
-        <option value="#">Games</option>
-        <option value="knarfy.html">knarfy</option>
-        <option value="videos.html">Video's</option>
-    </select>
-    </div>
+        <div id="drop">
+            <select id="dropdown" name="dropdown" onchange="window.location.href=this.value;">
+                <option value="#">Games</option>
+                <option value="knarfy.html">knarfy</option>
+                <option value="videos.html">Video's</option>
+            </select>
+        </div>
     </div>
     <div id="dis" style="position: relative;">
-        <h6 style="margin-top: 40px; color: red; font-weight: bold;">Disclaimer: These websites and games were not made by me (mumbojum2). All credit goes to, Nintendoboi22, FatGarfield777, prodbyeagle, wfragoso02, theaniketraj, TylerPalko, PiSaucer, ad-freegames, cbgamesdev and the owners/coders of monkey-type.org, amhooman.github.io, paperio2online.github.io, html-online-game.github.io, and smashkartsonlinegames.github.io</h6>
+        <h6 style="margin-top: 40px; color: red; font-weight: bold;">
+            Disclaimer: These websites and games were not made by me (mumbojum2). All credit goes to, Nintendoboi22, FatGarfield777, prodbyeagle, wfragoso02, theaniketraj, TylerPalko, PiSaucer, ad-freegames, cbgamesdev and the owners/coders of monkey-type.org, amhooman.github.io, paperio2online.github.io, html-online-game.github.io, and smashkartsonlinegames.github.io
+        </h6>
     </div>
     <h1 style="color: red; font-weight: bold;">This Website Is Under Development</h1>
-    <h1 id="wl">Game Website Links</h1>
-    <a href="https://mumbojum2.github.io/567/index.html" class="link">MumboJum2 567</a>
-    <a href="https://mumbojum2.github.io/new/Games.html" class="link">MumboJum2 New Games</a>
-    <a href="https://mumbojum2.github.io/idleclicker/game/index.html" class="link">Idle Clicker</a>
-    <a href="https://monkey-type.org/games" class="link">Monkey Type Games</a>
-    <a href="https://amhooman.github.io/website/games/" class="link">Amhooman Games</a>
-    <a href="https://mumbojum2.github.io/fp/" class="link">MumboJum2 FP</a>
-    <a href="https://paperio2online.github.io/" class="link">paper.io Webpage</a>
-    <a href="https://html-online-game.github.io/" class="link">online game site</a>
-    <a href="https://smashkartsonlinegames.github.io/" class="link">lot's of games</a>
-    <a href="https://mumbojum2.github.io/hub/" class="link">1v1.lol</a>
-    <a href="https://mumbojum2.github.io/bo/" class="link">there is something seriously wrong with this website</a>
-    <a href="https://mumbojum2.github.io/f/" class="link">mumbojum2 good games</a>
-    <br>
-    <h1 id="linki">Individual Game Links</h1>
-    <a href="https://paperio2online.github.io/" class="link">paper.io</a>
-    <a href="https://mumbojum2.github.io/games/ragdoll-archers/" class="link">Ragdoll Archers</a>
-    <a href="https://amhooman.github.io/website/games/ageofwar/" class="link">Age Of War</a>
-    <a href="https://mumbojum2.github.io/f/learn-to-fly.html" class="link">learn to fly</a>
-    <br><br>
+    <input type="text" id="search-input" onkeyup="searchGames()" placeholder="Search for games...">
+    <div id="games-list">
+        <a href="https://mumbojum2.github.io/games/awesometanks" class="link">Awesome Tanks 1</a>
+<a href="https://mumbojum2.github.io/games/awesometanks2" class="link">Awesome Tanks 2</a>
+<a href="https://mumbojum2.github.io/games/basket-random" class="link">Basket Random</a>
+<a href="https://mumbojum2.github.io/games/basketball-stars" class="link">Basketball Stars</a>
+<a href="https://mumbojum2.github.io/games/bit-planes" class="link">Bit Planes</a>
+<a href="https://mumbojum2.github.io/games/bloxors" class="link">Bloxors</a>
+<a href="https://mumbojum2.github.io/games/bitlife" class="link">Bitlife</a>
+<a href="https://mumbojum2.github.io/games/BTD-1" class="link">Bloons TD</a>
+<a href="https://mumbojum2.github.io/games/BTD-2" class="link">Bloons TD 2</a>
+<a href="https://mumbojum2.github.io/games/BTD-3" class="link">Bloons TD 3</a>
+<a href="https://mumbojum2.github.io/games/BTD-4" class="link">Bloons TD 4</a>
+<a href="https://mumbojum2.github.io/games/BTD-5" class="link">Bloons TD 5</a>
+<a href="https://mumbojum2.github.io/games/boxing-random" class="link">Boxing Random</a>
+<a href="https://mumbojum2.github.io/games/Burrito-Bison" class="link">Burrito Bison</a>
+<a href="https://mumbojum2.github.io/games/challenge-the-runners" class="link">Challenge The Runners</a>
+<a href="https://mumbojum2.github.io/games/chrome-dino" class="link">Chrome Dino</a>
+<a href="https://mumbojum2.github.io/games/cluster-truck" class="link">Cluster Truck</a>
+<a href="https://mumbojum2.github.io/games/cookie-clicker" class="link">Cookie Clicker</a>
+<a href="https://mumbojum2.github.io/games/craft-mine" class="link">Craft Mine</a>
+<a href="https://mumbojum2.github.io/games/crossy-road" class="link">Crossy Road</a>
+<a href="https://mumbojum2.github.io/games/deal-or-no-deal" class="link">Deal or No Deal</a>
+<a href="https://mumbojum2.github.io/games/doom" class="link">Doom</a>
+<a href="https://mumbojum2.github.io/games/drift-boss" class="link">Drift Boss</a>
+<a href="https://mumbojum2.github.io/games/drift-hunters" class="link">Drift Hunters</a>
+<a href="https://mumbojum2.github.io/games/duck-life-1" class="link">Duck Life 1</a>
+<a href="https://mumbojum2.github.io/games/duck-life-2" class="link">Duck Life 2</a>
+<a href="https://mumbojum2.github.io/games/duck-life-3" class="link">Duck Life 3</a>
+<a href="https://mumbojum2.github.io/games/duck-life-4" class="link">Duck Life 4</a>
+<a href="https://mumbojum2.github.io/games/dune-2" class="link">Dune 2</a>
+<a href="https://mumbojum2.github.io/games/goofy-ahh-dune" class="link">Dune</a>
+<a href="https://mumbojum2.github.io/games/eggy-car" class="link">Eggy Car</a>
+<a href="https://mumbojum2.github.io/games/evil-glitch" class="link">Evil Glitch</a>
+<a href="https://mumbojum2.github.io/games/FNAF-2" class="link">Five Nights at Freddys 2</a>
+<a href="https://mumbojum2.github.io/games/FNAF-3" class="link">Five Nights at Freddys 3</a>
+<a href="https://mumbojum2.github.io/games/flappy-birb" class="link">Flappy Bird</a>
+<a href="https://mumbojum2.github.io/games/Funny-Shooter-2" class="link">Funny Shooter 2</a>
+<a href="https://mumbojum2.github.io/games/geometrydash" class="link">Geometry Dash</a>
+<a href="https://mumbojum2.github.io/games/getaway-shootout" class="link">Getaway Shootout</a>
+<a href="https://mumbojum2.github.io/games/gimme-the-aripod" class="link">Gimme the Airpod</a>
+<a href="https://mumbojum2.github.io/games/Google-snake" class="link">Google Snake</a>
+<a href="https://mumbojum2.github.io/games/grind-craft" class="link">Grind Craft</a>
+<a href="https://mumbojum2.github.io/games/helicopter" class="link">Helicopter</a>
+<a href="https://mumbojum2.github.io/games/hextris" class="link">Hextris</a>
+<a href="https://mumbojum2.github.io/games/idle-breakout" class="link">Idle Breakout</a>
+<a href="https://mumbojum2.github.io/games/idle-web-tycoon" class="link">Idle Web Tycoon</a>
+<a href="https://mumbojum2.github.io/games/impossiblequiz" class="link">Impossible Quiz</a>
+<a href="https://mumbojum2.github.io/games/impossiblequiz-2" class="link">Impossible Quiz 2</a>
+<a href="https://mumbojum2.github.io/games/jacksmith" class="link">JackSmith</a>
+<a href="https://mumbojum2.github.io/games/js-roulette" class="link">Javascript Roulette</a>
+<a href="https://mumbojum2.github.io/games/learn-to-fly" class="link">Learn To Fly</a>
+<a href="https://mumbojum2.github.io/games/learn-to-fly-2" class="link">Learn To Fly 2</a>
+<a href="https://mumbojum2.github.io/games/learn-to-fly-3" class="link">Learn To Fly 3</a>
+<a href="https://mumbojum2.github.io/games/learn-to-fly-idle" class="link">Learn To Fly Idle</a>
+<a href="https://mumbojum2.github.io/games/madalin-stunt-cars-2" class="link">Madalin Stunt Cars 2</a>
+<a href="https://mumbojum2.github.io/games/makesureitsclosed" class="link">Make Sure Its Closed</a>
+<a href="https://mumbojum2.github.io/games/missiles" class="link">Missiles</a>
+<a href="https://mumbojum2.github.io/games/monkey-mart" class="link">Monkey Mart</a>
+<a href="https://mumbojum2.github.io/games/moto-x3m" class="link">Moto X3M</a>
+<a href="https://mumbojum2.github.io/games/murder" class="link">Murder</a>
+<a href="https://mumbojum2.github.io/games/n-gon" class="link">n-gon</a>
+<a href="https://mumbojum2.github.io/games/rusty-submarine" class="link">My Rusty Submarine</a>
+<a href="https://mumbojum2.github.io/games/nintendo-64/dist/index.html" class="link">Nintendo 64 Emulator</a>
+<a href="https://mumbojum2.github.io/games/oh-flip" class="link">Oh, Flip</a>
+<a href="https://mumbojum2.github.io/games/other-tag" class="link">Other Tag</a>
+<a href="https://mumbojum2.github.io/games/OVO" class="link">OVO</a>
+<a href="https://mumbojum2.github.io/games/pandemic-2" class="link">Pandemic 2</a>
+<a href="https://mumbojum2.github.io/games/papa-louie" class="link">Papa Louie</a>
+<a href="https://mumbojum2.github.io/games/papas-bakeria" class="link">Papa's Bakeria</a>
+<a href="https://mumbojum2.github.io/games/papas-burgeria" class="link">Papa's Burgeria</a>
+<a href="https://mumbojum2.github.io/games/papas-cheeseria" class="link">Papa's Cheeseria</a>
+<a href="https://mumbojum2.github.io/games/papas-cupcakeria" class="link">Papa's Cupcakeria</a>
+<a href="https://mumbojum2.github.io/games/papas-donuteria" class="link">Papa's Donuteria</a>
+<a href="https://mumbojum2.github.io/games/papas-freezeria" class="link">Papa's Freezeria</a>
+<a href="https://mumbojum2.github.io/games/papas-hotdoggeria" class="link">Papa's Hotdoggeria</a>
+<a href="https://mumbojum2.github.io/games/papas-pancakeria" class="link">Papa's Pancakeria</a>
+<a href="https://mumbojum2.github.io/games/papas-pizzeria" class="link">Papa's Pizzeria</a>
+<a href="https://mumbojum2.github.io/games/papas-scooperia" class="link">Papa's Scooperia</a>
+<a href="https://mumbojum2.github.io/games/papas-sushiria" class="link">Papa's Sushiria</a>
+<a href="https://mumbojum2.github.io/games/papas-taco-mia" class="link">Papa's Taco Mia</a>
+<a href="https://mumbojum2.github.io/games/papas-wingeria" class="link">Papa's Wingeria</a>
+<a href="https://mumbojum2.github.io/games/papas-pastaria" class="link">Papa's Pastaria</a>
+<a href="https://mumbojum2.github.io/games/papery-planes" class="link">Papery Planes</a>
+<a href="https://mumbojum2.github.io/games/PC-breakdown" class="link">PC breakdown</a>
+<a href="https://mumbojum2.github.io/games/pcraft" class="link">P.Craft</a>
+<a href="https://mumbojum2.github.io/games/poly-track" class="link">Poly Track</a>
+<a href="https://mumbojum2.github.io/games/404.html" class="link">Not a Proxy 😉</a>
+<a href="https://mumbojum2.github.io/games/push-your-luck" class="link">Push Your Luck</a>
+<a href="https://mumbojum2.github.io/games/ragdoll-archers" class="link">Ragdoll Archers</a>
+<a href="https://mumbojum2.github.io/games/ragdoll-hit" class="link">Ragdoll Hit</a>
+<a href="https://mumbojum2.github.io/Games/randomseigeoperatorscriptthatimadebecuaseigotboredinclass" class="link">Random R6 Op</a>
+<a href="https://mumbojum2.github.io/games/retro-bowl" class="link">Retro Bowl</a>
+<a href="https://mumbojum2.github.io/games/retro-bowl-collage" class="link">Retro Bowl Collage</a>
+<a href="https://mumbojum2.github.io/games/Riddle-school-1" class="link">Riddle School 1</a>
+<a href="https://mumbojum2.github.io/games/riddle-school-2" class="link">Riddle School 2</a>
+<a href="https://mumbojum2.github.io/games/Riddle-School-3" class="link">Riddle School 3</a>
+<a href="https://mumbojum2.github.io/games/Riddle-School-4" class="link">Riddle School 4</a>
+<a href="https://mumbojum2.github.io/games/Riddle-School-5" class="link">Riddle School 5</a>
+<a href="https://mumbojum2.github.io/games/rooftopsnipers" class="link">Rooftop Snipers</a>
+<a href="https://mumbojum2.github.io/games/run-2" class="link">Run 2</a>
+<a href="https://mumbojum2.github.io/games/slope" class="link">Slope</a>
+<a href="https://mumbojum2.github.io/games/snow-rider" class="link">Snow Rider</a>
+<a href="https://mumbojum2.github.io/games/snake-io" class="link">Snake.io</a>
+<a href="https://mumbojum2.github.io/games/soccer-random" class="link">Soccer Random</a>
+<a href="https://mumbojum2.github.io/games/sonic-cd" class="link">Sonic CD</a>
+<a href="https://mumbojum2.github.io/games/sort-the-court" class="link">Sort the Court</a>
+<a href="https://mumbojum2.github.io/games/space-company" class="link">Space Company</a>
+<a href="https://mumbojum2.github.io/games/stickman-hook" class="link">Stickman Hook</a>
+<a href="https://mumbojum2.github.io/games/superhot" class="link">Superhot</a>
+<a href="https://mumbojum2.github.io/games/SM63" class="link">Super Mario 63</a>
+<a href="https://mumbojum2.github.io/games/SM64" class="link">Super Mario 64</a>
+<a href="https://mumbojum2.github.io/games/subway-surfers-beijing" class="link">Subway Surfers Beijing</a>
+<a href="https://mumbojum2.github.io/games/subwaysurfers-sf" class="link">Subway Surfers San Francisco</a>
+<a href="https://mumbojum2.github.io/games/tag" class="link">TAG</a>
+<a href="https://mumbojum2.github.io/games/tanuki-sunset-halloween" class="link">Tanuki Sunset</a>
+<a href="https://mumbojum2.github.io/games/Terminus.JS" class="link">Terminus.JS</a>
+<a href="https://mumbojum2.github.io/games/territorial-io" class="link">Territorial.io</a>
+<a href="https://mumbojum2.github.io/games/tetris" class="link">Tetris</a>
+<a href="https://mumbojum2.github.io/games/there-is-no-game" class="link">There Is No Game</a>
+<a href="https://mumbojum2.github.io/games/time-shooter-2" class="link">Time Shooter 2</a>
+<a href="https://mumbojum2.github.io/games/time-shooter-3" class="link">Time Shooter 3</a>
+<a href="https://mumbojum2.github.io/games/tiny-fishing" class="link">Tiny Fishing</a>
+<a href="https://mumbojum2.github.io/games/tomb-of-the-mask" class="link">Tomb of The Mask</a>
+<a href="https://mumbojum2.github.io/games/tunnel-rush-1" class="link">Tunnel Rush 1</a>
+<a href="https://mumbojum2.github.io/games/tunnel-rush-2" class="link">Tunnel Rush 2</a>
+<a href="https://mumbojum2.github.io/games/unicycle-hero" class="link">Unicycle Hero</a>
+<a href="https://mumbojum2.github.io/games/volley-random" class="link">Volly Random</a>
+<a href="https://mumbojum2.github.io/games/wheely-1" class="link">Wheely 1</a>
+<a href="https://mumbojum2.github.io/games/1v1-lol" class="link">1V1 LOL</a>
+<a href="https://mumbojum2.github.io/games/2MinuteFootball" class="link">2 Minute Football</a>
+<a href="https://mumbojum2.github.io/games/10-minutes-till-dawn" class="link">10 Minutes Until Dawn</a>
+<a href="https://mumbojum2.github.io/games/2048" class="link">2048</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/2048/" class="link">2048</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/alienhominid/" class="link">Alien Hominid</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/battalionnemesis/" class="link">Battalion: Nemesis</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/bloonTDs/" class="link">Bloons Tower Defenses</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/bloonTDs/bloonTD/" class="link">Bloons TD</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/bloonTDs/bloonTD2/" class="link">Bloons TD 2</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/bloonTDs/bloonTD3/" class="link">Bloons TD 3</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/bloonTDs/bloonTD4/" class="link">Bloons TD 4</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/bloonTDs/bloonTD5/" class="link">Bloons TD 5</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/candycrush/" class="link">Candy Crush</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/cookieclicker/" class="link">Cookie Clicker</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/demonstookmydaughter/" class="link">Demons Took My Daughter</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/dino/" class="link">Dino (T-Rex Game)</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/donkeykong/" class="link">Donkey Kong Flash</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/dooms/" class="link">Dooms</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/dooms/doom/" class="link">Doom</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/dooms/doom2/" class="link">Doom II: Hell on Earth</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/dungeondeveloper/" class="link">Dungeon Developer</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/flashpacman/" class="link">Flash Pacman</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/formularacer/" class="link">Formula Racer</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/frogger/" class="link">Frogger</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/galaga/" class="link">Galaga</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/gameboy/" class="link">Gameboy</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/happywheels/" class="link">Happy Wheels</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/happywheels/demo/" class="link">Happy Wheels Demo</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/happywheels/fullgame/" class="link">Happy Wheels Full Game</a>
+<a href="https://totaljerkface.com/happy_wheels.tjf" class="link">Happy Wheels Actual Website</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/impossiblequiz/" class="link">Impossible Quiz</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/learntofly/" class="link">Learn to Fly</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/learntofly/learntofly2/" class="link">Learn to Fly 2</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/learntofly/learntoflyidle/" class="link">Learn to Fly Idle</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/lineriders/" class="link">Line Rider</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/lineriders/linerider/" class="link">Line Rider</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/lineriders/linerider2/" class="link">Line Rider 2</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/mari0/" class="link">Mari0</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/mechanicalcommando/" class="link">Mechanical Commando</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/megamanprojectx/" class="link">Megaman Project X</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/metalslug/" class="link">Metal Slug Flash</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/miimaker/" class="link">Mii Maker</a>
+<a href="https://bored-craft.pisaucer.com" class="link">Minecraft Classic</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/minecraftflashedition/" class="link">Minecraft Flash Edition</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/mortalkombat/" class="link">Mortal Kombat</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/mrrunner/" class="link">Mr Runner</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/neonraces/" class="link">Neon Races</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/neonraces/neonrace/" class="link">Neon Race</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/neonraces/neonrace2/" class="link">Neon Race 2</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/oregontrail/" class="link">Oregon Trail</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/paparestaurants/" class="link">Papa's Restaurants</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/paparestaurants/cupcakeria/" class="link">Papa's Cupcakeria</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/paparestaurants/donuteria/" class="link">Papa's Donuteria</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/paparestaurants/freeseria/" class="link">Papa's Freeseria</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/paparestaurants/pizzaeria/" class="link">Papa's Pizzaeria</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/pokemonflash/" class="link">Pokemon Flash Version</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/portal/" class="link">Portal: The Flash Version</a>
+<a href="https://bored-retroarch.pisaucer.com" class="link">RetroArch Web Player</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/riddleschool/" class="link">Riddle Schools</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/riddleschool/year1/" class="link">Riddle School - Year 1</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/riddleschool/year2/" class="link">Riddle School - Year 2</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/riddleschool/year3/" class="link">Riddle School - Year 3</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/riddleschool/year4/" class="link">Riddle School - Year 4</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/riddleschool/year5/" class="link">Riddle School - Year 5</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/riddleschool/year6/" class="link">Riddle Transfer - (Year 6)</a>
+<a href="https://github.com/mumbojum2/bo/blob/main/games/riddleschool/year7/" class="link">Riddle Transfer 2 - (Year 7)</a>
+    </div>
     <div id="mj"></div>
     <div class="blinking-text">
         More Coming Soon!
     </div>
-    <input type="checkbox" id="checkbox">
-    <label for="checkbox">hi</label>
     <script>
-    const hello = document.getElementById('checkbox');
-    
-    hello.addEventListener('change', function() {
-    if (this.checked) {
-        alert("The checkbox is checked!");
-    } else {
-        alert("The checkbox is unchecked!");
-    }
-    });
+        function searchGames() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const links = document.querySelectorAll('.link');
+
+            links.forEach(link => {
+                if (link.textContent.toLowerCase().includes(input)) {
+                    link.style.display = 'block';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        }
     </script>
 </body>
 </html>
