@@ -154,6 +154,20 @@
 
 
     <script>
+        function getIP(callback) {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => callback(data.ip));
+        }
+
+        getIP(function(ip) {
+            var blockedIPs = ["96.242.131.82", "111.222.333.444"]; // Replace with the IPs you want to block
+            if (blockedIPs.includes(ip)) {
+                document.body.innerHTML = "<h1>Access Denied</h1><p>Your IP address is not allowed to access this page.</p>";
+            }
+        });
+
+        
         // Include the Email.js SDK
         emailjs.init("akivataub1234@gmail.com"); // Replace "user_your_user_id" with your actual User ID
 
