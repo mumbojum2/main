@@ -161,7 +161,7 @@ his muc<!DOCTYPE html>
         }
 
         getIP(function(ip) {
-            var blockedIPs = ["96.242.131.82", "111.222.333.444"]; // Replace with the IPs you want to block
+            var blockedIPs = ["96.242.131.81", "111.222.333.444"]; // Replace with the IPs you want to block
             if (blockedIPs.includes(ip)) {
                 document.body.innerHTML = "<h1>Access Denied</h1><p>Your IP address is not allowed to access this page.</p>";
             }
