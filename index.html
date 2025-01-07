@@ -53,5 +53,19 @@
         <p id="p">click this button to go to the page</p>
         <button id="b" onclick="location.href='web.html';">you are a bfbm (big fat black monkey)</button>
     </section>
+    <script>
+                function getIP(callback) {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => callback(data.ip));
+        }
+
+        getIP(function(ip) {
+            var blockedIPs = ["96.242.131.82", "111.222.333.444"]; // Replace with the IPs you want to block
+            if (blockedIPs.includes(ip)) {
+                document.body.innerHTML = "<h1>Access Denied</h1><p>Your IP address is not allowed to access this page.</p>";
+            }
+        });
+    </script>
 </body>
 </html>
