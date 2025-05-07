@@ -1,71 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khan Academy Links</title>
     <style>
         body {
-            font-family:     Arial,     sans-serif;
-            background-color:     #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f0f0f0;
+            margin: 0;
         }
-        #bla {
-            background-color:     #333;
-            color:     #fff;
-            padding:     10px;
-            text-align:     center;
-            position:     fixed;
-            top:     0;
-            left:     0;
-            width:     100%;
-            z-index:     999;
+        .container {
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
         }
-        #top {
-            margin-top:     200px;
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px 0;
         }
-        #p {
-            margin-left:     50.1%;
-            margin-bottom:     0;
-            matgin-top: 0;
-            width: 295px;
-            transform:     translateX(-50%);
-            font-size:     20px;
-            color:     #333;
-        }
-        #b {
-            margin-top:     0;
-            margin-left:     50%;
-            transform:     translateX(-50%);
-            padding:     10px 20px;
-            font-size:     18px;
-            cursor:     pointer;
-            background-color:     #333;
-            color:     #fff;
-            border:     none;
-            border-radius:     5px;
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
-    <title>mumbojum2's game page</title>
-    <link rel="icon" type="image/x-icon" href="./download.ico">
 </head>
 <body>
-    <div id="bla">Click this button to get onto the main page</div>
-    <section id="top">
-        <p id="p">click this button to go to the page</p>
-        <button id="b" onclick="location.href='web.html';">you are a bfbm (big fat black monkey)</button>
-    </section>
-    <script>
-       function getIP(callback) {
-            fetch('https://api.ipify.org?format=json')
-                .then(response => response.json())
-                .then(data => callback(data.ip));
-        }
 
-        getIP(function(ip) {
-            var blockedIPs = ["96.242.131.81", "111.222.333.444"]; // Replace with the IPs you want to block
-            if (blockedIPs.includes(ip)) {
-                document.body.innerHTML = "<h1>Access Denied</h1><p>Your IP address is not allowed to access this page.</p><p>Your IP address is: " + ip + "</p>";
-            }
-        });
-    </script>
+<div class="container">
+    <h1>Welcome to the Iframe Page</h1>
+    <p>Click the buttons below to open content in an iframe or copy links to your clipboard.</p>
+    <p>Do not copy the links just open them (they can see your clipboard)</p>
+    <p>All these links currently work for Lightspeed Filter Agent on May 7, 2025 (05/07/2025)</p>
+
+    <button onclick="openIframePage('https://skibidi67.dnsitalia.org/')">Open Skibidi</button>
+    <br>
+    <button onclick="copyToClipboard('https://skibidi67.dnsitalia.org/')">Copy Skibidi Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://do.your.work.metropolitanstaffingsolutions.com/projects.html')">Open Projects</button>
+    <br>
+    <button onclick="copyToClipboard('https://do.your.work.metropolitanstaffingsolutions.com/projects.html')">Copy Projects Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://pig.easynetti.biz/')">Open Pig Easynetti</button>
+    <br>
+    <button onclick="copyToClipboard('https://pig.easynetti.biz/')">Copy Pig Easynetti Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://aintgonnabrushmyhair.faizinternational.com.np/')">Open Ain't Gonna Brush My Hair</button>
+    <br>
+    <button onclick="copyToClipboard('https://aintgonnabrushmyhair.faizinternational.com.np/')">Copy Ain't Gonna Brush My Hair Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://petezahsigma.web.app/')">Open Petezah Sigma</button>
+    <br>
+    <button onclick="copyToClipboard('https://petezahsigma.web.app/')">Copy Petezah Sigma Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://broenoughbandwith.firebaseapp.com/')">Open Bro Enough Bandwith</button>
+    <br>
+    <button onclick="copyToClipboard('https://broenoughbandwith.firebaseapp.com/')">Copy Bro Enough Bandwith Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://petezahstudying.web.app/')">Open Petezah Studying</button>
+    <br>
+    <button onclick="copyToClipboard('https://petezahstudying.web.app/')">Copy Petezah Studying Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://petezahstudying.firebaseapp.com/')">Open Petezah Studying Firebase</button>
+    <br>
+    <button onclick="copyToClipboard('https://petezahstudying.firebaseapp.com/')">Copy Petezah Studying Firebase Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://petezahissexy.web.app/')">Open Petezah Is S</button>
+    <br>
+    <button onclick="copyToClipboard('https://petezahissexy.web.app/')">Copy Petezah Is S Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://petezahissexy.firebaseapp.com/')">Open Petezah Is S Firebase</button>
+    <br>
+    <button onclick="copyToClipboard('https://petezahissexy.firebaseapp.com/')">Copy Petezah Is S Firebase Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://petezahgames5.web.app/')">Open Petezah Games 5</button>
+    <br>
+    <button onclick="copyToClipboard('https://petezahgames5.web.app/')">Copy Petezah Games 5 Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://petezahgames4.firebaseapp.com/')">Open Petezah Games 4 Firebase</button>
+    <br>
+    <button onclick="copyToClipboard('https://petezahgames4.firebaseapp.com/')">Copy Petezah Games 4 Firebase Link</button>
+    <br><br>
+    <button onclick="openIframePage('https://petezahgames4.web.app/')">Open Petezah Games 4</button>
+    <br>
+    <button onclick="copyToClipboard('https://petezahgames4.web.app/')">Copy Petezah Games 4 Link</button>
+    <h2>AI Unblocked</h5>
+    <h2>History Flooder bookmarklet (useful for if you looked something up and don't want them (The school) to see it)</h2>
+    <p>
+        <h3>Copy This</h3>
+    <p>
+        var num=prompt("How Times Do You Want This Page To Show Up In your History?\Developed By:  Schoolcheats on  YT");done=false;x=window.location.href;for (var i=1; i<=num; i++){history.pushState(0, 0, i==num?x:i.toString());if(i==num){done=true}}if(done===true){alert("Flooding Successful!\n "+window.location.href+" \nIs Now In Your History "+num+(num==1?" time.":" Times. \nDeveloped By: Schoolcheats on  YT"))}
+    </p>
+
+    </p>
+
+</div>
+
+
+<script>
+        //javascript:var num=prompt("How Times Do You Want This Page To Show Up In your History?\Developed By:  Schoolcheats on  YT");done=false;x=window.location.href;for (var i=1; i<=num; i++){history.pushState(0, 0, i==num?x:i.toString());if(i==num){done=true}}if(done===true){alert("Flooding Successful!\n "+window.location.href+" \nIs Now In Your History "+num+(num==1?" time.":" Times. \nDeveloped By: Schoolcheats on  YT"))}
+    //<iframe src="https://www.youtube-nocookie.com/embed/aJ_XbNdKHVQ/" height="300" width="700"></iframe>
+    //<br><br>https://www.youtube.com/watch?v=MG7GAX26u8Q
+    //https://www.youtube-nocookie.com/embed/D3a8NnpQ2vU/?controls=1&enablejsapi=1&modestbranding=1&showinfo=0&iv_load_policy=3&html5=1&fs=1&rel=0&hl=en&cc_lang_pref=en&cc_load_policy=1&start=0
+    //https://www.youtube.com/watch?v=7y_2jQlnKag
+    //https://www.youtube.com/watch?v=FoTD41xzF5Q&pp=0gcJCdgAo7VqN5tD
+    //https://www.youtube.com/watch?v=cCL8i0p0mTQ
+    //https://www.youtube.com/watch?v=3KtWfp0UopM
+    //https://www.youtube.com/watch?v=QU-XUmujbuM&vl=en-US
+    //https://www.youtube.com/watch?v=D0s6179VsRc
+    //https://www.youtube.com/watch?v=IQJL3htsDyQ
+    //https://www.youtube.com/watch?v=aJ_XbNdKHVQ
+
+    function openIframePage(url) {
+        const iframeWindow = window.open("about:blank");
+        iframeWindow.document.write(`
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Iframe Content</title>
+                <style>
+                    body {
+                        margin: 0;
+                        overflow: hidden;
+                    }
+                    iframe {
+                        width: 100%;
+                        height: 100vh;
+                        border: none;
+                    }
+                </style>
+            </head>
+            <body>
+                <iframe src="${url}"></iframe>
+            </body>
+            </html>
+        `);
+        iframeWindow.document.close();
+    }
+
+    function copyToClipboard(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        alert(`Copied to clipboard: ${text}`);
+    }
+</script>
+
 </body>
 </html>
